@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>html session 1</title>
+    <style>
+        body {
+            font-family: Avenir;
+        }
+
+        .title {
+            color: dodgerblue;
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table.collapsed,
+        table.collapsed td {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML => pensez en arborescence !!! -->
+    <!-- en CSS le signe + signifie prochain sibling droit -->
+    <!-- en CSS le signe > signifie enfant direct -->
+    <!-- Un petit shortcut Emmet (c'est sympa non ? : ) -->
+    <!-- h1.title{Premier pas}+h2.title+(p>img)+h2+p -->
+    <h1 class="title">Premier pas</h1>
+
+    <h2 class="title">Blocks vs Inline</h2>
+    <p>
+        HTML c'est chouette ! <br>Simple et puissant, le langage permet de structurer vos pages et applications.
+        <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/courses/1603881/14570827997997_illu-cours_html5-css3.png" alt="html logo" width="150">
+    </p>
+
+    <h2 class="title">Utiliser les styles en ligne (inline styles)</h2>
+    <p>
+        On peut styliser une balise en utilisant son attribut <span style="color: firebrick; font-weight: bold">style</span>.<br> Même si en principe on utilise des feuilles de style externes, c'est toujours bon à <span style="color: forestgreen; font-weight: bold">savoir</span>        !<br> Parfois c'est même l'unique solution (en intéraction avec JS par exemple).
+    </p>
+    <h2 class="title">Liste simple</h2>
+    <ul class="list">
+        <li class="item">am</li>
+        <li class="item">stram</li>
+        <li class="item">gram !</li>
+    </ul>
+
+    <h2 class="title">Liste imbriquée</h2>
+    <ol class="list blog-pages">
+        <li class="item blog-cat">
+            <span>Actualités</span>
+        </li>
+        <li class="item blog-cat">
+            <span>Sport</span>
+            <ul class="list sub-cat">
+                <li class="item">
+                    <span>Automobiles</span>
+                    <ol>
+                        <li class="item">F1</li>
+                        <li class="item">Rallye</li>
+                        <li class="item">Moto</li>
+                    </ol>
+                </li>
+                <li class="item">Ballons</li>
+                <li class="item">Equestres</li>
+            </ul>
+        </li>
+        <li class="item blog-cat">
+            <span>Mode</span>
+        </li>
+    </ol>
+
+    <h2 class="title">Table simple</h2>
+    <!-- table>tr*2>td*2 -->
+    <table>
+        <tr>
+            <td>As</td>
+            <td>Trèfle</td>
+        </tr>
+        <tr>
+            <td style="color:red">C&oelig;ur</td>
+            <td style="color:red">Carreaux</td>
+        </tr>
+    </table>
+
+    <h2 class="title">Table (un peu plus) complexe</h2>
+
+    <table class="collapsed">
+        <thead>
+            <tr>
+                <th colspan="2"></th>
+                <th colspan="2">Premier groupe</th>
+                <th colspan="2">Deuxieme groupe</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>personne</th>
+                <th>singulier</th>
+                <th>Pluriel</th>
+                <th>singulier</th>
+                <th>pluriel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Présent</td>
+                <td>1</td>
+                <td>je code</td>
+                <td>Nous codons</td>
+                <td>Je réussis</td>
+                <td>Nous réussissons</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tu codes</td>
+                <td>Vous codez</td>
+                <td>Tu réussis</td>
+                <td>Vous réussissez</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Il/elle code</td>
+                <td>Ils/elles codent</td>
+                <td>Il/elle réussit</td>
+                <td>Ils/elles réussissent</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="title">Player audio</h2>
+
+
+    <audio controls>
+    <source src="media/audio/8000__cfork__cf-fx-bloibb.mp4" type="audio/mp3">
+    </audio>
+
+    <h2 class="title">Video</h2>
+
+    <video src="media/video/big_buck_bunny.mp4" controls width="450" height="264">
+
+    </video>
+
+
+</body>
+
+</html>

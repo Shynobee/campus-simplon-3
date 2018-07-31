@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS - Dictée de sélecteurs II</title>
+    <style>
+        body {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+        }
+
+        p {
+            box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+            padding: 10px;
+            max-width: 400px;
+            text-align: center;
+            border-radius: .1rem;
+        }
+
+        pre {
+            white-space: pre-line;
+            padding-left: 10px;
+            line-height: 26px;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        h3.title a:not(.italic) {
+            color: red;
+        }
+
+        nav .list > li {
+            list-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">CSS - Dictée de sélecteurs II</h1>
+    <p>
+        Quel(s) n&oelig;uds(s) du document <bt>sont sélectionné(s) <br> avec les sélecteurs CSS suivants ?
+    </p>
+    <pre>
+        h2.title, h3.title a:not(.italic)
+        #section, #footer
+        div#shopcart.is-empty
+        ol:empty, ul:empty
+        nav .list > li
+        li + p span
+        li ~ p span
+        body > *
+        *.chose /*(NO !!!!)*/
+        .chose
+        section .title:nth-child(3n+1)
+    </pre>
+    <hr>
+    <h2 class="title">titre h2</h2>
+    <h3 class="title">titre h3
+        <a class="italic">link a</a>
+        <a>link b</a>
+    </h3>
+
+    <a class="italic">link c</a>
+
+    <div id="shopcart" class="is-empty cart"></div>
+    <div id="shopcart" class="is-empty">
+        <div class="cart"></div>
+    </div>
+
+    <nav>
+        <ul class="list">
+            <li>a</li>
+            <li>b</li>
+            <li>
+                c
+                <ul class="sublist">
+                    <li>c1</li>
+                    <li>c2</li>
+                    <li>c3</li>
+                    <li>c4</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Avenir;
+    font-size: 16px;
+    padding: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: dodgerblue;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+/* --------------- EXO 1 */
+.target {
+    border: 1px solid;
+}
+
+.inner-box {
+    background: #ea4545;
+    border: 3px dashed;
+}
+
+#target_1 {
+    height: 200px;
+    padding: 50px;
+    width: 200px;
+}
+
+#target_1 #inner_box {
+    height: 100%;
+}
+
+#target_2 {
+    height: 30vw;
+    padding: 7%;
+    width: 30vw;
+}
+
+#target_2 #inner_box2 {
+    height: 100%;
+}
+/* --------------- EXO 2 */
+#shaped_table {
+    width: 50%;
+}
+
+#shaped_table td {
+    border: 2px solid;
+    height: 40px;
+}
+
+#shaped_table tr:nth-child(2) td:nth-child(odd) {
+    background: silver;
+}
+
+/* --------------- EXO 3*/
+.exo3 .row {
+    border: 1px solid;
+    margin-bottom: 5px;
+    padding: 5px 5px 0;
+    width: 65%;
+}
+
+.exo3 .block {
+    background: purple;
+    color: orange;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.exo3 .block.small {
+    width: 25%;
+}
+
+.exo3 .block.big {
+    width: 75%;
+}
+
+.exo3 .row:first-of-type .block:first-of-type {
+    margin-bottom: 3px;
+}
+
+.exo3 .row:last-of-type .block.big {
+    margin-left: 25%;
+}
+
+/* --------------- EXO 4*/
+.ib-row {
+    color: white;
+    font-size: 0;
+    margin-bottom: 20px;
+    max-width: 540px;
+}
+.ib-row.red {
+    background: #ea4545;
+}
+.ib-row.black {
+    background: black;
+}
+
+.ib-row .block {
+    display: inline-block;
+    font-size: 1rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 25%;
+}
+
+/* --------------- EXO 5*/
+
+.circles {
+    border: 2px solid;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px 10px 0;
+    width: 240px;
+}
+
+.circle {
+    background: #30ea30;
+    border-radius: 50%;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+.circle.left {
+    float: left;
+}
+
+.circle.right {
+    float: right;
+}
+
+.circle.clear {
+    clear: both;
+}
+
+/* --------------- EXO 6*/
+
+.blue-blocks {
+    border: 4px solid;
+    padding: 5px;
+}
+
+.blue-blocks .row,
+.blue-blocks .col {
+    font-size: 0;
+}
+
+.blue-blocks .row {
+    background: silver;
+}
+
+.blue-blocks .row:first-of-type {
+    margin-bottom: 5px;
+}
+
+.blue-blocks .row:last-of-type {
+    color: red;
+}
+
+.blue-blocks .col {
+    background: darkorange;
+    display: inline-block;
+}
+
+.blue-blocks .block {
+    background: blue;
+    display: inline-block;
+    font-size: 1rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.blue-blocks .row:first-of-type .block {
+    margin-right: 10px;
+    width: calc(25% - 7.5px);
+}
+
+.blue-blocks .row:last-of-type .block {
+    margin-right: 5px;
+    width: calc(50% - 2.5px);
+}
+
+.blue-blocks .row:last-of-type .block:first-of-type {
+    margin-bottom: 5px;
+}
+
+.blue-blocks .row:last-of-type .block:nth-child(2),
+.blue-blocks .row .block:last-of-type {
+    margin-right: 0;
+}
+
+.blue-blocks .row:last-of-type .col:first-of-type {
+    margin-right: 10px;
+    width: calc(70% - 10px);
+}
+
+.blue-blocks .row:last-of-type .col:last-of-type {
+    width: 30%;
+}

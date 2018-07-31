@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body, html {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+            font-weight: bolder;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table.collapsed,
+        table.collapsed td {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Les sélecteurs CSS</h1>
+    <h2>Par balise</h2>
+    <p>
+        Pour sélectionner toutes les instances d'un type de balise, on utilise simple le nom de la balise visée.
+    </p>
+    <pre>
+        h1 {
+            color: blue;
+        }
+        p {
+            font-weight: bold;
+        }
+        li {
+            list-style: none;
+        }
+    </pre>
+    <h2>Par id</h2>
+    <p>
+        Pour sélectionner un élément par son identifiant (id), on utilise le symbole # (dièse).
+    </p>
+    <pre>
+        #user_1 {
+            color: blue;
+        }
+        #titre_pincipal {
+            font-weight: bold;
+        }
+    </pre>
+    <h2>Par classe</h2>
+    <p>
+        Pour sélectionner tous les éléments portant la même classe CSS, on utilise le symbole . (point).
+    </p>
+    <pre>
+        .user {
+            color: blue;
+        }
+        .item {
+            background: red;
+        }
+    </pre>
+    <h2>Combiner les sélecteurs</h2>
+    <p>
+        Pour sélectionner plusieurs sélecteurs, on utilise le symbole , (virgule).
+    </p>
+    <pre>
+        #titre_principal, .title, em {
+            font-weight: bold;
+        }
+        .item, li {
+            list-style: none;
+        }
+    </pre>
+</body>
+</html>

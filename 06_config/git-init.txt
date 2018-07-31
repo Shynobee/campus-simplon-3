@@ -1,0 +1,20 @@
+1 / créer repo sur github (ou gitlab ou bitbuckets etc..)
+2 / créer un dossier sur votre poste (local)
+3 / initialiser le dossier local depuis le terminal avec la commande =>
+    git init
+4 / lier le dossier local au repo distant avec la commande =>
+    git remote add origin https://github.com/le-nom-de-ton-repo
+---------------------------------------------------------------------
+5 / uniquement SI AJOUT D'UN README => synchroniser le dossier local
+    git pull origin master
+---------------------------------------------------------------------
+6 / ajouter un ficher avec la commande
+    touch test.txt
+7 / vérifier le status avec la commande
+    git status
+8 / faire votre premier commit (sauvegarde)
+    git commit -m "mon premier commit : )"
+9 / vérifier le status avec la commande
+    git status
+10 / pousser les modifications vers le repo distant
+    git push origin master
