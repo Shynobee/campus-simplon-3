@@ -1,0 +1,13 @@
+COMMANDE DU TERMINAL (LINUX OU GITBASH)
+
+cd / (retourne à la racine du disque dur)
+cd nom_du_dossier (entre dans le dossier indiqué)
+cd .. (remonte d'un niveau dans le disque dur)
+cd ../.. (remonte de 2 niveaux dans le disque dur)
+cd ../../.. (remonte de 3 niveaux, etc....)
+mkdir nom_du_dossier (make dir => créé un dossier)
+ls (liste les dossiers et fichier du répertoire courant)
+touch nom_du_fichier.extension (créér un fichier)
+rm nom_fichier (supprime un fichier)
+rmdir (supprime un dossier vide)
+rmdir -rf (supprime un dossier et tout son contenu)
