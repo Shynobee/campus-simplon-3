@@ -75,6 +75,12 @@ var easyDOM = function() {
     }
 };
 
+var colorDiv = function(cible) {
+    cible.style.background = "dodgerblue";
+    cible.style.color = "white";
+    cible.style.fontWeight = "bold";
+};
+
 var start = function() {
     console.log("DOM LOADED !!!");
     afficherObjets();

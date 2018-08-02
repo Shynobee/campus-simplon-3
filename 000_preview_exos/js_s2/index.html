@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - Session 2</title>
+    <script src="app.js"></script>
+    <style>
+        body {
+            font-family: Avenir;
+        }
+        .title {
+            color: dodgerblue;
+        }
+        .res {
+            background: silver;
+            padding: 10px;
+            text-align: center;
+            border-radius: .3rem;
+        }
+        #inverser_couleurs {
+            font-size: 0;
+        }
+        .block {
+            border: 1px solid;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 100px;
+            font-size: initial;
+            height: 100px;
+            text-align: center;
+            width: 100px;
+            margin-right: 10px;
+            user-select: none;
+        }
+        .warning {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">JS - Session 2</h1>
+    <div id="inverser_couleurs">
+        <div class="block" style="background: firebrick" onclick="inverserCouleurs(this)">A</div>
+        <div class="block" style="background: forestgreen" onclick="inverserCouleurs(this)">B</div>
+    </div>
+    <button id="btn">click</button>
+</body>
+</html>
