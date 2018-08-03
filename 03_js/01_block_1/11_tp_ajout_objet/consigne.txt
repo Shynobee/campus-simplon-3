@@ -1,0 +1,18 @@
+guillaume.amangoua@gmail.com
+---------------------------------
+Etape 1
+---------------------------------
+Créer un boutton en HTML
+Au click sur ce bouton, ajouter un objet à un tableau JS
+Cet objet représente ce que vous souhaitez... (produits, humains, etc)
+Afficher la progression du remplissage du tableau dans la console
+---------------------------------
+Etape 2
+---------------------------------
+Ajouter un input text en HTML  n
+Au click sur le bouton, remplir une propriété du nouvel objet avec la valeur de l'input
+---------------------------------
+Etape 3
+---------------------------------
+Afficher chaque élément du tableau dans une balise HTML (ul > li ?)
+Pour cela utiliser innerHTML ou createElement+appendChild.

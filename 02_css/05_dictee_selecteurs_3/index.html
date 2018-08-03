@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS - Dictée de sélecteurs III</title>
+    <style>
+        body {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+        }
+
+        p {
+            box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+            padding: 10px;
+            max-width: 400px;
+            text-align: center;
+            border-radius: .1rem;
+        }
+
+        pre {
+            white-space: pre-line;
+            padding-left: 10px;
+            line-height: 26px;
+        }
+
+        .chose, .truc {
+            padding: 20px;
+        }
+
+        .chose .truc {
+            color: purple;
+            font-weight: bold;
+            border: 2px solid green;
+        }
+        .chose.truc {
+            background: black;
+            color: red;
+        }
+        .chose > .truc {
+            border: 2px solid darkorange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">CSS - Dictée de sélecteurs III</h1>
+    <p>
+        Quel(s) n&oelig;uds(s) du document <bt>sont sélectionné(s) <br> avec les sélecteurs CSS suivants ?
+    </p>
+    <pre>
+        01 - h2[class]
+        02 - #header, #sidebar
+        03 - section.blog.sport, section.blog.mode
+        04 - *
+        05 - div, section, p, article
+        06 - .list li
+        07 - .list > li
+        08 - nav .item:nth-child(odd)
+        09 - section .title:nth-child(3n+1)
+        10 - .chose, .truc
+        11 - .chose .truc
+        12 - .chose.truc
+        13 - .chose > .truc
+    </pre>
+
+    <h2 class="title">Créer le HTML / CSS (color) pour les sélecteurs de 10 à 13</h2>
+
+    <div class="chose">chose</div>
+
+    <div class="truc">truc</div>
+
+    <div class="chose truc">truc</div>
+
+    <div class="chose">
+        <span>chose</span>
+        <div class="truc">
+            <span>truc</span>
+            <div class="truc">
+                <span>truc imbriqué</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- .truc, .chose -->
+    <div class="truc">
+        <div class="truc"></div>
+        <p></p>
+        <div class="chose"></div>
+    </div>
+    <p class="chose"></p>
+    <!-- .truc .chose -->
+    <div class="truc">
+        <p>
+            <span class="chose"></span>
+        </p>
+    </div>
+    <!-- .truc > .chose -->
+    <div class="truc">
+        <a class="chose"></a>
+    </div>
+    <!-- .truc.chose -->
+    <div class="truc chose"></div>
+
+    <!--  .truc + .chose -->
+    <!--  .truc ~ .chose -->
+    <div class="truc"></div>
+    <div class="chose"></div>
+    <div class="chose"></div>
+
+
+
+
+
+</body>
+
+</html>
