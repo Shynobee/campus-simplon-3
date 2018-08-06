@@ -9,7 +9,7 @@ Afficher la progression du remplissage du tableau dans la console
 ---------------------------------
 Etape 2
 ---------------------------------
-Ajouter un input text en HTML  n
+Ajouter un input text en HTML
 Au click sur le bouton, remplir une propriété du nouvel objet avec la valeur de l'input
 ---------------------------------
 Etape 3
