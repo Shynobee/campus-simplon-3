@@ -30,3 +30,23 @@ var jeSuisGlobale = "et c'est VRAIMENT pas top ...";
     /* la ligne ci-dessous lève une erreur. on saura dans la console du nom de la fonction ayant généré cette erreur (jeNeSuisPasAnonyme) */
     console.log(choubidou);
 }());
+
+// ---------------------------------------------------------------
+
+(function truc() {
+    var x = "yo";
+    log(x); // yo
+
+
+    function insiderrrrr() {
+        log(x); // "yo"
+        var y = "yeaaah";
+        log(y); // "yeaaah"
+    }
+
+    log(y); // undefined
+
+}());
+
+log(x); // undefined
+log(y); // undefined
