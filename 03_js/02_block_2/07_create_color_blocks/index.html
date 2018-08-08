@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - TD - Color blocks</title>
+    <script src="app.js"></script>
+    <!-- <script src="correction.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">TD Color blocks</h1>
+    <h2 class="title">Etape 1</h2>
+    <p>
+        Créer une mini-application contenant :<br>
+    </p>
+    <ul>
+        <li>un champs input number</li>
+        <li>un champs input color</li>
+        <li>un bouton de validation.</li>
+        <li>une div#blocks.blocks</li>
+    </ul>
+    <p>
+        Au click sur le bouton, créer autant de div(s) qu'indiqué dans le champs number (1 par défaut).<br>
+        Le(s) block(s) créé(s) aura(ont) la couleur indiquée dans le champs color.<br>
+        Chaque block sera inséré comme enfant de #blocks.
+    </p>
+
+    <h2 class="title">Etape 2</h2>
+    <p>
+        Au click sur chaque block : passer de l'état actif/inactif.<br>
+        Les blocks actifs peuvent être mis à jour (on change la couleur) au click sur le bouton de validation.
+
+    </p>
+    <p>
+        Idée d'amélioration : créer un bouton reset qui vide le contenu de blocks. Si il y a des blocks actifs, ne supprimer que ceux là.
+    </p>
+    <h2 class="title">Indices :</h2>
+    <ul class="list indices">
+        <li>document.createElement</li>
+        <li>element.appendChild</li>
+        <li>element.value</li>
+        <li>element.style</li>
+        <li>element.onclick</li>
+    </ul>
+    <div id="tools" class="tools">
+        <input id="nb_blocks" type="number" class="input" value="1" min="1">
+        <input id="color_blocks" type="color" class="input">
+        <input id="create_blocks" type="submit" class="input submit">
+    </div>
+    <hr>
+    <div id="blocks" class="blocks"></div>
+</body>
+</html>
