@@ -1,0 +1,11 @@
+Learn Git in 20 Minutes (anglais)
+https://www.youtube.com/watch?v=Y9XZQO1n_7c
+
+
+Introduction to Git with Scott Chacon of GitHub (anglais)
+https://www.youtube.com/watch?feature=player_detailpage&v=ZDR433b0HJY#t=2791s
+
+
+
+Comprendre les submodules de git
+https://delicious-insights.com/fr/articles/git-submodules/
