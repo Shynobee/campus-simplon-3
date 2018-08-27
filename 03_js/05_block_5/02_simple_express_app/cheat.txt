@@ -1,0 +1,16 @@
+initialiser le dossier avec npm init
+installer les dépendances suivantes =>
+->
+    => express
+->dev
+    => nodemon
+
+DONC =>
+
+npm i --save-dev nodemon
+npm i --save express
+
+
+créer un dossier public/
+créer le fichier public/index.html
+remplir le fichier index avec une page simple...

@@ -2,7 +2,7 @@
 const http = require("http");
 const url = process.argv[2] || "http://google.fr";
 // console.log(process.argv);
-// return;
+
 http.get(url, (response) => {
     // console.log(response);
     response.on("data", (data) => {
