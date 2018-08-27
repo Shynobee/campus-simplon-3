@@ -2,9 +2,14 @@
 const fs = require("fs");
 const path = require("path");
 
+function filterFilesExt(dirPath, ext, clbk) {
 
-
-module.exports = {
-    whoAmI: "my first module : )",
-    zeAnswer: 42
-};
+    fs.readdir(dirPath, function (err, data) {
+        if (err) return clbk(err, null);
+        const tmp = data.filter(function(d) {
+            return path.extname(d) === "." + ext;
+        });
+        clbk(null, tmp);
+    });
+}
+module.exports = filterFilesExt;
