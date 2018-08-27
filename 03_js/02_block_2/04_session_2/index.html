@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Session 2</title>
+    <script src="app.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+        }
+        .input {
+            box-shadow: 0px 0.1px 2px 0.9px #696666;
+            border: none;
+            padding: 5px 10px 5px 20px;
+        }
+        p {
+            box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+            border-radius: .1rem;
+            max-width: 400px;
+            padding: 10px;
+            text-align: justify;
+        }
+        .input[type=text] {
+            box-shadow: 0px 0.1px 2px 0.9px #696666;
+            border: none;
+            padding: 5px 10px 5px 20px;
+        }
+        p:empty {
+            display: none;
+        }
+        .blocks {
+            display: flex;
+        }
+        .blocks .block {
+            align-items: center;
+            border: 4px solid;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            height: 64px;
+            margin-right: 10px;
+            width: 64px;
+        }
+        .btns {
+            display: flex;
+            margin: 20px 0;
+            max-width: 90%;
+            justify-content: space-between;
+        }
+        .btn {
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: .3rem;
+            cursor: pointer;
+            display: inline-flex;
+            height: 32px;
+            justify-content: center;
+            min-width: 90px;
+        }
+        .btn:hover {
+            color: white;
+            background-color: dodgerblue;
+        }
+        .carre {
+            border: 4px solid;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            width: 100px;
+        }
+        .carre.rouge {
+            background-color: red;
+        }
+        .carre.vert {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">JS - Session 2</h1>
+    <btn id="btn" class="btn">action 1</btn>
+    <h2 class="title">Etape 1</h2>
+    <p>
+        Avant de commencer les exos de la session 2, créer une fonction constructeur de votre choix.<br>Exemples :  Produit, Utilisateur, Abonnement, Vehicule, InstrumentMusique, etc.<br>
+        Créer plusieurs instances de votre construct avec des paramètres différents.<br>
+        En option: lier une ou plusieurs méthodes via le prototype.
+    </p>
+    <h2 class="title">Suite</h2>
+    <p>
+        Rédiger les exos de la session 2 !<br>
+        Bon code !
+    </p>
+    <h3 class="title">Exo 1 (inversion couleurs)</h3>
+    <div id="red" class="carre" style="background-color: red" onclick="session2.inverserCouleur2(this)">A</div>
+    <div id="green" class="carre" style="background-color: green" onclick="session2.inverserCouleur2(this)">B</div>
+
+    <!-- Exemple avec les classes CSS => -->
+
+    <!-- <div class="carre rouge" onclick="session2.inverserCouleur3()">A</div>
+    <div class="carre vert"  onclick="session2.inverserCouleur3()">B</div>
+    <div class="carre rouge" onclick="session2.inverserCouleur3()">C</div>
+    <div class="carre vert"  onclick="session2.inverserCouleur3()">D</div>
+    <div class="carre rouge" onclick="session2.inverserCouleur3()">E</div>
+    <div class="carre vert" onclick="session2.inverserCouleur3()">F</div> -->
+    <hr>
+
+    <h3 class="title">Exo 2 (inversion lettres)</h3>
+    <input type="text" id="saisie_user" class="input">
+    <p id="res_saisie"></p>
+    <p id="res_palindrome"></p>
+    <hr>
+
+    <h3 class="title">Exo 3 (Lignes et colonnes)</h3>
+    <input type="number" id="nb_lignes" min="1" max="20" value="1">
+    <input type="number" id="nb_cols" min="1" max="20" value="1">
+    <input type="submit" id="creer_lignes" value="dessiner lignes" class="btn">
+    <p id="res_exo3" style="white-space:pre;"></p>
+    <hr>
+
+    <h3 class="title">Exo 5 (Usine à users)</h3>
+    <input type="number" id="nb_users" min="1" value="1">
+    <div class="btns">
+        <input type="submit" id="creer_users" value="saisir users" class="btn">
+        <input type="submit" id="hello_users" value="dire bonjour users" class="btn">
+        <input type="submit" id="voir_users" value="voir users" class="btn">
+    </div>
+
+</body>
+</html>

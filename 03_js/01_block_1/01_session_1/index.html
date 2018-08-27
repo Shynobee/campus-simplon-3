@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS - Session 1</title>
+        <style>
+            body {
+                font-family: Avenir;
+            }
+            .title {
+                color: dodgerblue;
+            }
+            .res {
+                background: silver;
+                padding: 10px;
+                text-align: center;
+                border-radius: .3rem;
+            }
+            #easy_dom {
+                font-size: 0;
+            }
+            .block {
+                border: 1px solid;
+                box-sizing: border-box;
+                display: inline-block;
+                font-size: 16px;
+                line-height: 100px;
+                font-size: initial;
+                height: 100px;
+                text-align: center;
+                width: 20%;
+            }
+            .warning {
+                color: red;
+            }
+        </style>
+        <script>
+            console.log("hello world !");
+        </script>
+        <script src="./app.js"></script>
+    </head>
+    <body>
+        <h1 class="title">JS - Session 1</h1>
+        <h2 class="title">Exercice 1: Paramètre à afficher</h2>
+        <p>
+            Écrire une fonction displayTextBox() prenant une string en paramètre et l'affichant dans une alert box.
+            Exécuter la fonction au chargement de la page ET depuis la console du navigateur.
+        </p>
+        <h2 class="title">Exercice 2: Sur une ligne</h2>
+        <p>
+            Écrire une fonction prenant deux paramètres a et b et les affichant dans la console, à la suite sur une même ligne, séparés par un espace. Par exemple avec les deux strings suivantes:
+        </p>
+        <ul>
+            <li>C'est une belle journée...</li>
+            <li>Pour s’exercer à JS!</li>
+        </ul>
+        <h2 class="title">Exercice 3: multiplier</h2>
+        <p>
+            Écrire une fonction prenant deux paramètres a et b et les multipliant. Si le résultat est de type number, le retourner et afficher le résultat dans la console. Sinon, une alerte indiquera une erreur.
+        </p>
+        <h2 class="title">Exercice 4: Affichage d'objets</h2>
+        <p>
+            Créer une div HTML portant l'id res_user1.<br>
+Créer deux objet littéraux user1 et user2 (attention à la portée des variables).<br>
+Chaque objet a 2 propriétés:<br>
+1. name: string<br>
+2. age: number<br><br>
+Affecter des valeur cohérentes aux objets selon leur type.<br>
+Écrire une fonction getName(user), retournant le nom de l'user passé en paramètre.<br>
+Écrire une fonction getAge(user), retournant l'age de l'user passé en paramètre.<br>
+Écrire une fonction displayUserInfo(user).<br>
+Cette méthode affiche dans la div les informations de l'utilisateur passé en paramètre.<br>
+        </p>
+        <div id="res_users" class="res"></div>
+        <hr>
+        <div id="easy_dom">
+            <div class="block" id="div_1" onclick="colorDiv(this)">1</div>
+            <div class="block" id="div_2" onclick="colorDiv(this)">2</div>
+            <div class="block" id="div_3" onclick="colorDiv(this)">3</div>
+            <div class="block" id="div_4" onclick="colorDiv(this)">4</div>
+            <div class="block" id="div_5" onclick="colorDiv(this)">5</div>
+        </div>
+        <p id="result_easy_dom" class="warning"></p>
+    </body>
+</html>

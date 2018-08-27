@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./app.js"></script>
+    <style>
+        body {
+            font-family: Avenir;
+        }
+        .cible.is-active {
+            background: firebrick;
+        }
+        .cible.rounded {
+            border-radius: 50%;
+        }
+        .cible {
+            align-items: center;
+            background: dodgerblue;
+            border: 2px solid black;
+            border-radius: .3rem;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            height: 100px;
+            justify-content: center;
+            margin-top: 20px;
+            transition: border-radius 1s linear, background .5s linear;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Events Simples</h1>
+    <button id="mon_btn">click me homie ; )</button>
+    <div class="cible" id="cible">#jesuistarget</div>
+    <div class="cible" id="cible2">#jesuislasuite</div>
+</body>
+</html>

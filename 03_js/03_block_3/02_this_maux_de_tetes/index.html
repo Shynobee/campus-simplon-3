@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>JS - this === "maux de tête" ?</title>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+        }
+        .input[type=text] {
+            box-shadow: 0px 0.1px 2px 0.9px #696666;
+            border: none;
+            padding: 5px 10px 5px 20px;
+        }
+        .btn {
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: .3rem;
+            cursor: pointer;
+            display: inline-flex;
+            height: 32px;
+            justify-content: center;
+            min-width: 120px;
+        }
+        .btn:hover {
+            color: white;
+            background-color: dodgerblue;
+        }
+        p {
+            box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+            border-radius: .1rem;
+            max-width: 400px;
+            padding: 10px;
+            text-align: center;
+        }
+        p:empty {
+            display: none;
+        }
+        .blocks {
+            display: flex;
+        }
+        .blocks .block {
+            cursor: pointer;
+            align-items: center;
+            border: 4px solid;
+            display: flex;
+            height: 64px;
+            justify-content: center;
+            margin-right: 10px;
+            width: 64px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">JS - this === "maux de tête" ?</h1>
+    <button id="btn" class="btn">action</button>
+    <p>
+        Contrairement à PHP ou Java, dans lesquels le mot-clé this représente toujours la même chose (un constructeur)...<br>
+        En JS, la valeur de this change selon le contexte... :D
+    </p>
+    <h2 class="title">Cas 1</h2>
+    <p>
+        Dans le scope global, this représente window.<br>
+        window est l'objet global contenant toutes les fonction natives de JS.
+    </p>
+    <h2 class="title">Cas 2</h2>
+    <p>
+        En mode strict, dans une fonction, this est undefined.<br>
+        C'est une sécurité pour ne pas écrire dans window sans s'en rendre compte.<br>
+        Cela peut arriver quand par exemple on oublie de déclarer une variable avec le mot-clé "var" + quand on essaie d'affecter une valeur à this (this.val = "truc");
+    </p>
+    <h2 class="title">Cas 3</h2>
+    <p>
+        Dans un event listener, un écouter d'évènement...<br>
+        this représente la source de l'évènement. C'est à dire l'objet qui a déclenché l'event.<br>
+        Les event listeners sont faciles à repérer:<br>
+        <ul>
+            <li>onload = maFunction1</li>
+            <li>onclick = maFunction2</li>
+            <li>onmouseenter = maFunction3</li>
+        </ul>
+        On peut les écrire également comme ceci:
+        <ul>
+            <li>window.addEventListener("click", maFunction1)</li>
+            <li>element.addEventListener("onmouseenter", maFunction2)</li>
+            <li>element.addEventListener("click", maFunction3)</li>
+        </ul>
+    </p>
+    <h2 class="title">Cas 4</h2>
+    <p>
+        Dans un constructeur, this représente le constructeur lui même, ou plutôt l'instance (l'objet construit) d'un constructeur.
+    </p>
+</body>
+</html>

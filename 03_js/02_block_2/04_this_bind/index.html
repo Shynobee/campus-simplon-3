@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - this et bind</title>
+    <script src="app.js"></script>
+    <script>
+        console.log("voir le fichier ./app.js");
+        console.log(app);
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Avenir;
+            font-size: 16px;
+        }
+        .title {
+            color: dodgerblue;
+            font-size: 1.3rem;
+        }
+        .input {
+            box-shadow: 0px 0.1px 2px 0.9px #696666;
+            border: none;
+            padding: 5px 10px 5px 20px;
+        }
+        p {
+            box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+            border-radius: .1rem;
+            max-width: 400px;
+            padding: 10px;
+            text-align: justify;
+        }
+        .input[type=text] {
+            box-shadow: 0px 0.1px 2px 0.9px #696666;
+            border: none;
+            padding: 5px 10px 5px 20px;
+        }
+        p:empty {
+            display: none;
+        }
+        .blocks {
+            display: flex;
+        }
+        .blocks .block {
+            align-items: center;
+            border: 4px solid;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            height: 64px;
+            margin-right: 10px;
+            width: 64px;
+        }
+        .btns {
+            display: flex;
+            margin: 20px 0;
+            max-width: 90%;
+            justify-content: space-between;
+        }
+        .btn {
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: .3rem;
+            cursor: pointer;
+            display: inline-flex;
+            height: 32px;
+            justify-content: center;
+            min-width: 90px;
+        }
+        .btn:hover {
+            color: white;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">JS - this et bind</h2>
+    <ol>
+        <li>coder une fonction constructeur (User ou Autre...)</li>
+        <li>
+            Associer une fonction au prototype, utilisant le this du construct.<br>
+            Instancier des objets et exécuter la fonction du proto.
+        </li>
+        <li>
+            Associer un eventListener à un bouton HTML ou autre.<br>
+            Utiliser bind() pour conserver la référence au this du construct.
+        </li>
+        <li>
+            <span>Enjoy ; )</span><br>
+        </li>
+    </ol>
+    <p>
+        <button id="btn1" class="btn">infos simplonien 1</button>
+        <button id="btn2" class="btn">infos simplonien 2</button>
+    </p>
+</body>
+</html>
