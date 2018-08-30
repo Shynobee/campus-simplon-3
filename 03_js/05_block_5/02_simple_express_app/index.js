@@ -3,14 +3,15 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const port = 3333;
-// on définit un dossier pour les fichiers statiques (html, css, js ...)
+//définir un dossier pour fichiers statiques(html,css,js...)
 app.use(express.static(__dirname + '/public', {
   extensions: ['html']
 }));
-
+// GET la route vide (/, la page d'accueil le + souvent)
 app.get('/', function(req, res) {
     // express va chercher dans le dossier static
-    // il associe les autres fichiers (ex css) et les envoit au navigateur avec le bon type MIME
+    // + associer les autres fichiers (ex css)
+    // et les envoit au navigateur avec les bons types MIME
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 app.get('/about', function(req, res) {
