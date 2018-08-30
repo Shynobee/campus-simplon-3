@@ -1,0 +1,16 @@
+body {
+  font-family: Avenir;
+}
+.title {
+  color: dodgerblue;
+}
+#new_user {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+#new_user input {
+  margin-bottom: 10px;
+  height: 32px;
+  padding-left: 10px;
+}
