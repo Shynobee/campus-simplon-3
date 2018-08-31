@@ -31,9 +31,21 @@ app.post('/user', (req, res) => {
 });
 
 app.get('/user', (req, res) => {
+  // console.log(req);
+  console.log("@getuser");
   database.getUser( (err, dataset) => {
     res.send(dataset);
   });
+});
+
+app.delete('/user', (req, res) => {
+  // console.log(req.body);
+  database.deleteUser((err, dataset) => {
+    console.log(dataset);
+    res.send("FROM USER DELETE");
+    // if (err) return res.status(500).send(err);
+    // return res.status(200).send(dataset);
+  }, req.body.ids); // tableau d'ids ici ...
 });
 
 

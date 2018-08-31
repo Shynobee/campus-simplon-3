@@ -36,7 +36,7 @@ const appClient = (function appClient() {
     // console.log(usersToDelete);
     doAjax("http://localhost:5555/user", "DELETE", res => {
       removeUser(JSON.parse(res));
-    }, { userIds: usersToDelete });
+    }, { ids: usersToDelete });
   };
 
   const getUsers = function getUsers() {
@@ -64,6 +64,7 @@ const appClient = (function appClient() {
   };
 
   const displayUser = function displayUser(userList) {
+    console.log(userList);
     domList.innerHTML = "";
     userList.forEach(user => {
       let box = document.createElement("input");
@@ -81,10 +82,10 @@ const appClient = (function appClient() {
   };
 
   const start = function start() {
+      domList = document.getElementById("list_user");
       document.getElementById("btn_get_user").onclick = getUsers;
       document.getElementById("btn_new_user").onclick = createUser;
       document.getElementById("btn_del_user").onclick = deleteUser;
-      domList = document.getElementById("list_user");
   };
 
   window.addEventListener("DOMContentLoaded", start);
