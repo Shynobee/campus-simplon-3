@@ -1,4 +1,1 @@
-/* jshint esversion : 6 */
-// ./public/js/app.js
-
-console.log("hello app JS front side");
+"use strict";function _toConsumableArray(r){if(Array.isArray(r)){for(var o=0,n=Array(r.length);o<r.length;o++)n[o]=r[o];return n}return Array.from(r)}console.log("hello world of full stacks !!");var x=42,foo=function(r){return x+r};window.addEventListener("DOMContentLoaded",function(){console.log([].concat(_toConsumableArray(document.querySelectorAll("*"))))});

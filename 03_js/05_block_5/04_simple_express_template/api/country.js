@@ -1,14 +1,10 @@
 /*jshint esversion :  6 */
 
-// /api/country.js
+// @root/api/country.js
 
 const countryAPi = function countryAPi(connection) {
-
-  const userModel = require("./../model/country")(connection);
-
-  console.log("userModel ==>");
-  console.log(userModel);
-  console.log("-------------");
+  const router = require("express").Router();
+  return router;
 };
 
 module.exports = countryAPi;

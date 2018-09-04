@@ -1,5 +1,9 @@
 /* jshint esversion : 6 */
+
+// @root/api/user.js
+
 const userAPi = function userAPi(connection) {
+
   const router = require("express").Router();
   const userModel = require("./../model/user")(connection);
 

@@ -1,6 +1,6 @@
 /*jshint esversion :  6 */
 
-// /model/user.js
+// @root/model/user.js
 
 const userModel = function userModel(connection) {
 

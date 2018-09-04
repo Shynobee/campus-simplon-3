@@ -1,14 +1,10 @@
 /*jshint esversion :  6 */
 
-// /api/bill.js
+// @root/api/bill.js
 
-const countryAPi = function countryAPi(app, connection) {
-
-  const userModel = require("./../model/country")(connection);
-
-  console.log("userModel ==>");
-  console.log(userModel);
-  console.log("-------------");
+const billAPI = function billAPI(connection) {
+  const router = require("express").Router();
+  return router;
 };
 
-module.exports = countryAPi;
+module.exports = billAPI;
