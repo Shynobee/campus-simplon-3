@@ -10,11 +10,11 @@ const api = require(__dirname + "/api")(app);
 
 // APP CONFIG !!!
 app.use(api.prefix, api.routers);
-app.set('view engine', 'ejs'); // CHECK THE DOC http://ejs.co/
-app.set('views', __dirname + '/view'); //  précise à express le dossier des vues
+app.set("view engine", "ejs"); // CHECK THE DOC http://ejs.co/
+app.set("views", __dirname + "/view"); //  précise à express le dossier des vues
 // définition de ressources statiques...
-app.use('/ejs', express.static(__dirname + '/node_modules/ejs'));
-app.use(express.static(__dirname + '/public'));
+app.use("/ejs", express.static(__dirname + "/node_modules/ejs"));
+app.use(express.static(__dirname + "/public"));
 
 // TEMPLATE VARS !!!
 // Accessibles dans tout le template via app.locals (API express)
@@ -30,26 +30,34 @@ app.locals.site.nav = [
   {label: "nous-contacter", route: "contact"},
 ];
 
-// ROUTES DES PAGES DE l'APPLICATION
-app.get('/', function(req, res) {
-  res.render('index', {nom: "guillaume"});
+// ROUTES DES PAGES DE l"APPLICATION
+app.get("/", function(req, res) {
+  res.render("index", {nom: "guillaume"});
   // on passe un objet ({nom: "gui"}) à la vue, utilisable dans le template EJS
 });
 
-app.get('/country', function(req, res) {
-  res.render('country', {title: "Country !!!"});
+app.get("/country", function(req, res) {
+  res.render("country", {
+    title: "Country !!!"
+  });
 });
 
-app.get('/user', function(req, res) {
-  res.render('user', {title: "User !!!"});
+app.get("/user", function(req, res) {
+  res.render("user", {
+    title: "Manage Users"
+  });
 });
 
-app.get('/bill', function(req, res) {
-  res.render('bill');
+app.get("/bill", function(req, res) {
+  res.render("bill", {
+    title: "Manage Bills"
+  });
 });
 
-app.get('/contact', function(req, res) {
-  res.render('contact');
+app.get("/contact", function(req, res) {
+  res.render("contact", {
+    title: "Nous contacter"
+  });
 });
 
 app.listen(port, function() {

@@ -1,8 +1,12 @@
+
+
 * {
   box-sizing: border-box;
 }
+
 body {
     font-family: Avenir;
+    margin: 0;
 }
 p {
     box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
@@ -16,6 +20,7 @@ p:empty {
 }
 .title {
   color: dodgerblue;
+  margin-top: 0;
 }
 .btn {
   cursor: pointer;

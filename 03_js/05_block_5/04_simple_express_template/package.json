@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./index.js",
     "gulp": "gulp watch",
-    "dev": "npm run server & npm run gulp"
+    "dev": "npm run gulp & npm run server"
   },
   "author": "",
   "license": "ISC",
