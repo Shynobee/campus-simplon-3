@@ -4,6 +4,7 @@
     https://developer.mozilla.org/en-US/docs/Web/JavaScript
     https://www.youtube.com/watch?v=YIoUjR24SMw&list=PL2B82A06C79ECE66E
     https://laurent-audibert.developpez.com/Cours-UML/
+    https://git-scm.com/book/fr/v1/
     // HTTP STATUS CODES + VERBS
     https://restfulapi.net/http-status-codes/
     https://www.restapitutorial.com/lessons/httpmethods.html
@@ -36,7 +37,6 @@ app.post('/user', (req, res) => {
   database.createUser((err, info) => {
     if (err) return res.status(500).send(err);
     return res.status(200).send(info);
-
   }, req.body); // post datas ici ...
 });
 
