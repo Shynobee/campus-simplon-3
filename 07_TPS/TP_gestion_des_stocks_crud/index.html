@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TP - Gestion des Stocks III</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            const toggleNode = function() {
+                this.nextElementSibling.classList.toggle("is-active");
+            };
+            document.querySelectorAll(".clickable").forEach(function(n) {
+                n.onclick = toggleNode;
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1 class="title clickable">TP - Gestion du Stock III (C.R.U.D)</h1>
+    <div>
+        <p>
+            Bonne nouvelle :<br>
+            La société bizOnline a validé votre prototype, le round 2 débute !<br>
+            Développez une application web de type client/serveur permettant la gestion d'un stock pour un ecommerce.<br>
+            Le client web présentera votre maîtrise de HTML5, CSS3 et JS.<br>
+            Le serveur tournera sous nodeJS.<br>
+            La persistance des données sera réalisée avec une base mysql.<br>
+        </p>
+        <p>
+            Vous publierez votre code sur github (sans node_modules, avec l'export SQL).<br>
+            Date rendu avant <b>lundi 10/09/2018 - 13h00 précise</b>.
+        </p>
+    </div>
+    <hr>
+    <h2 class="title clickable">Besoins du client final</h2>
+    <div>
+        <p>
+            Une application client/serveur pour : <br>
+            saisir, consulter, modifier et supprimer des produits et leur marques associées.<br>
+            Ces fonctionnalités seront accessibles via une API développées par vos soins.<br>
+            Les opérations CRUD se feront de préférence avec la méthode AJAX.<br>
+            Vous rédigerez la <b>documentation</b> de vos fonctions.
+        </p>
+        <ul>
+          <li>
+            <h3>PRODUITS</h3>
+              <ul>
+                <li>Ajouter un nouveau produit au stock. (C)</li>
+                <li>Visualiser les produits dans une table (avec le nom de marque). (R)</li>
+                <li>Modifier les caractéristiques d'un produit. (U)</li>
+                <li>Supprimer un produit du stock. (D)</li>
+              </ul>
+          </li>
+          <li>
+            <h3>MARQUES</h3>
+              <ul>
+                <li>Ajouter une nouvelle marque. (C)</li>
+                <li>Visualiser les marques dans une table. (R)</li>
+                <li>Modifier une marque. (U)</li>
+                <li>Supprimer une marque. (D)</li>
+              </ul>
+          </li>
+        </ul>
+    </div>
+    <hr>
+    <h2 class="title clickable">Proposition de schémas de base de données</h2>
+    <div class="print-page-break">
+      <p>
+        Vos tables rassembleront à minima les informations suivantes.
+      </p>
+        <p>
+            Base gestion_stock_crud / table produit (innoDB)<br><br>
+            - <b>id</b> PK SMALLINT UNSIGNED AI<br>
+            - <b>id_marque</b> FK SMALLINT UNSIGNED<br>
+            - <b>nom</b> VARCHAR NOT NULL<br>
+            - <b>prix</b> DECIMAL NOT NULL<br>
+            - <b>description</b> TEXT<br>
+            [ en option (voir la librairie <a href="https://github.com/expressjs/multer" target="_blank">multer</a>) ] - <b>image</b> VARCHAR
+        </p>
+        <p>
+            Base gestion_stock_crud / table marque  (innoDB)<br><br>
+            - <b>id</b> PK SMALLINT UNSIGNED AI<br>
+            - <b>nom</b> VARCHAR NOT NULL<br>
+        </p>
+    </div>
+    <hr>
+    <h2 class="title clickable">Challenge UI/UX</h2>
+    <div>
+        <p>
+            Donnez vous à fond pour proposer la meilleure interface possible.<br>
+            Inspirez-vous des CMS existants (prestashop, woocommerce, magento)
+        </p>
+    </div>
+    <hr>
+    <p>
+      Bon code à toutes et à tous !!!
+    </p>
+</body>
+</html>
