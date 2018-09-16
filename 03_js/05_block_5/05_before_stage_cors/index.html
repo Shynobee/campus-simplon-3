@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Before Stage</title>
+    <script src="./public/js/app.js"></script>
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+<body>
+    <h1 class="title">Notes to Node</h1>
+    <p>
+        envoyer des données (des notes),vers le serveur
+        Chaque note est composée d'un titre et d'un corps
+        Côté serveur on utilisera le POST pour stocker les notes dans un fichier JSON.
+    </p>
+    <h2 class="title">Formulaire</h2>
+    <form id="form_note" class="form">
+        <label for="note_title">titre de la note</label>
+        <input id="note_title" type="text" value="test title">
+        <label for="note_body">corps de la note</label>
+        <textarea id="note_body" cols="30" rows="10" >yoyoyoyoy</textarea>
+        <button id="send_note">ok</button>
+    </form>
+</body>
+</html>

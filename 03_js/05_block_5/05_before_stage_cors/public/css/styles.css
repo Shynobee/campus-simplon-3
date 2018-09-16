@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Avenir;
+}
+.title {
+    color: dodgerblue;
+}
+
+#form_note {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    
+}

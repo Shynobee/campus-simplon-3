@@ -73,14 +73,15 @@
             - <b>id</b> PK SMALLINT UNSIGNED AI<br>
             - <b>id_marque</b> FK SMALLINT UNSIGNED<br>
             - <b>nom</b> VARCHAR NOT NULL<br>
-            - <b>prix</b> DECIMAL NOT NULL<br>
+            - <b>prix</b> DECIMAL NOT NULL UNSIGNED<br>
             - <b>description</b> TEXT<br>
+            - <b>stock</b> SMALLINT UNSIGNED DEFAULT(0)<br>
             [ en option (voir la librairie <a href="https://github.com/expressjs/multer" target="_blank">multer</a>) ] - <b>image</b> VARCHAR
         </p>
         <p>
             Base gestion_stock_crud / table marque  (innoDB)<br><br>
             - <b>id</b> PK SMALLINT UNSIGNED AI<br>
-            - <b>nom</b> VARCHAR NOT NULL<br>
+            - <b>nom</b> VARCHAR UNIQUE NOT NULL<br>
         </p>
     </div>
     <hr>
