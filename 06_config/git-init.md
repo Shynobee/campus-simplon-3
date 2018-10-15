@@ -10,7 +10,7 @@
 
 ### 1.3 / lier le dossier local au repo distant avec la commande 
 
-    git remote add origin https://github.com/le-nom-de-ton-repo
+    git remote add origin https://github.com/ton-pseudo/le-nom-de-ton-repo
 
 ### 1.4/ uniquement SI AJOUT D'UN README => synchroniser le dossier local
 
